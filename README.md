@@ -1,30 +1,20 @@
-# Hackathon Backend API
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-## Status Report
-I have cleaned up the code from the chat history. Here are the key fixes:
+# Run and deploy your AI Studio app
 
-1.  **Circular Imports Fixed**: Split `auth.py` into `auth.py` (Telegram logic) and `security.py` (JWT/Token logic) to prevent the recursion error.
-2.  **Router Ordering**: In `users.py`, the `/me` endpoint is strictly defined before `/{user_id}` to prevent the "int parsing" error.
-3.  **Timezone/Timestamp Validation**: Updated Telegram auth to use `time.time()` (Unix timestamp) consistently to avoid `Authentication data expired` errors due to timezone mismatches.
-4.  **New Fields Added**: 
-    *   `User`: `avatar_url`, `tg_username`, `hide_tg_username`.
-    *   `Achievement`: `icon_url`.
-    *   New Model: `HackathonParticipation` (Portfolio).
+This contains everything you need to run your app locally.
 
-## Setup
+View your app in AI Studio: https://ai.studio/apps/drive/1o7e_sm0EQI-Jt1YSMDL_X_mHvEPLjb_z
 
-1. Create virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # or venv\Scripts\activate on Windows
-   ```
+## Run Locally
 
-2. Install dependencies:
-   ```bash
-   pip install fastapi uvicorn sqlalchemy pydantic python-jose passlib[bcrypt] python-multipart
-   ```
+**Prerequisites:**  Node.js
 
-3. Run server:
-   ```bash
-   uvicorn app.main:app --reload
-   ```
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
