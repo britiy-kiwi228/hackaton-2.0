@@ -1,0 +1,5 @@
+{
+  "name": "Hackathon Backend API (Cleaned)",
+  "description": "A cleaned-up, robust FastAPI backend based on the provided chat history. \n\nANSWERS TO YOUR QUESTIONS:\n1. Yes, I see the chat history and the file contents within the HTML you provided.\n2. No, I cannot access the GitHub link directly (I don't have internet access), but I have reconstructed the latest version of the code from the chat history you uploaded.\n\nThis codebase fixes the circular imports in auth, adds the missing fields (avatar, portfolio, achievements), and corrects the router ordering issues.",
+  "requestFramePermissions": []
+}
